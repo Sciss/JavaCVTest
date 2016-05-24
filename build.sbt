@@ -9,7 +9,8 @@ scalaVersion := "2.11.8"
 scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-Xfuture", "-encoding", "utf8")
 
 libraryDependencies ++= Seq(
-  "de.sciss" %% "fileutil" % "1.1.1"
+  "de.sciss" %% "fileutil"  % "1.1.1",
+  "de.sciss" %% "swingplus" % "0.2.1"
 )
 
 javaCppPresetLibs ++= Seq(
