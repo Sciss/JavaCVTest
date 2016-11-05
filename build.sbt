@@ -6,13 +6,13 @@ homepage     := Some(url(s"https://github.com/Sciss/${name.value}"))
 licenses     := Seq("gpl v2+" -> url("http://www.gnu.org/licenses/gpl-2.0.txt"))
 scalaVersion := "2.11.8"
 
-scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-Xfuture", "-encoding", "utf8")
+scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-Xfuture", "-encoding", "utf8", "-Xlint")
 
 libraryDependencies ++= Seq(
-  "de.sciss" %% "fileutil"  % "1.1.1",
+  "de.sciss" %% "fileutil"  % "1.1.2",
   "de.sciss" %% "swingplus" % "0.2.1"
 )
 
 javaCppPresetLibs ++= Seq(
-  "ffmpeg" -> "2.8.1"
+  "ffmpeg" -> "3.1.2"
 )
