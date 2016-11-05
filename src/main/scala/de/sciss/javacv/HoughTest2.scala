@@ -54,7 +54,7 @@ object HoughTest2 {
 //        fIn = userHome/"Documents"/"temp/"/"IMG_7854_sobel.jpg"
 //        fIn = userHome/"Documents"/"temp/"/"IMG_7782_sobel.jpg"
 //        fIn = userHome/"Documents"/"temp/"/"IMG_7777_sobel.jpg"
-t //        fIn = userHome/"Documents"/"temp/"/"IMG_7777_diff.jpg"
+//        fIn = userHome/"Documents"/"temp/"/"IMG_7777_diff.jpg"
         fIn = userHome/"Documents"/"temp/"/"IMG_7773_sobel.jpg"
 //        fIn = userHome/"Documents"/"temp/"/"IMG_7864_sobel_aspect.jpg"
        )
