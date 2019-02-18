@@ -40,6 +40,7 @@ object ReadVideoTest {
 
   def run()(implicit config: Config): Unit = {
     import config._
+    require (fVideo.isFile, s"File not found: $fVideo")
 //  val fVideo = userHome / "Documents" / "projects" / "Unlike" / "moor_out.mp4"
     val g = new FFmpegFrameGrabber(fVideo.path)
     g.start()
