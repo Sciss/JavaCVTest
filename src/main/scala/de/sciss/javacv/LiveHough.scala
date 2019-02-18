@@ -2,9 +2,9 @@
  *  LiveHough.scala
  *  (JavaCVTest)
  *
- *  Copyright (c) 2016 Hanns Holger Rutz. All rights reserved.
+ *  Copyright (c) 2016-2019 Hanns Holger Rutz. All rights reserved.
  *
- *  This software is published under the GNU General Public License v2+
+ *  This software is published under the GNU General Public License v3+
  *
  *
  *  For further information, please contact Hanns Holger Rutz at

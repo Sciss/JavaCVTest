@@ -2,9 +2,9 @@
  *  HoughTest2.scala
  *  (JavaCVTest)
  *
- *  Copyright (c) 2016 Hanns Holger Rutz. All rights reserved.
+ *  Copyright (c) 2016-2019 Hanns Holger Rutz. All rights reserved.
  *
- *  This software is published under the GNU General Public License v2+
+ *  This software is published under the GNU General Public License v3+
  *
  *
  *  For further information, please contact Hanns Holger Rutz at
@@ -13,14 +13,14 @@
 
 package de.sciss.javacv
 
-import java.awt.{BasicStroke, Color, RenderingHints}
 import java.awt.image.BufferedImage
-import javax.imageio.ImageIO
+import java.awt.{BasicStroke, Color, RenderingHints}
 
 import de.sciss.file._
+import javax.imageio.ImageIO
 import org.bytedeco.javacpp.indexer.{FloatRawIndexer, IntRawIndexer}
-import org.bytedeco.javacpp.opencv_core.{Mat, Point, Rect, Scalar}
-import org.bytedeco.javacpp.{opencv_core, opencv_imgcodecs, opencv_imgproc}
+import org.bytedeco.javacpp.opencv_core.{Mat, Point}
+import org.bytedeco.javacpp.{opencv_imgcodecs, opencv_imgproc}
 
 import scala.collection.immutable.{IndexedSeq => Vec}
 

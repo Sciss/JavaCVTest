@@ -1,1 +1,1 @@
-addSbtPlugin("org.bytedeco" % "sbt-javacv" % "1.11")
+addSbtPlugin("org.bytedeco" % "sbt-javacv" % "1.17")
