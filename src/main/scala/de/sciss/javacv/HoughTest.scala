@@ -99,7 +99,11 @@ object HoughTest {
 
     houghP()
 
-    val fOut    = userHome / "Documents" / "temp" / "test.jpg"
+    val base    = userHome / "Documents"
+    require (base.isDirectory)
+    val dirOut  = base / "temp"
+    dirOut.mkdirs()
+    val fOut    = dirOut / "hough-test.jpg"
     val pathOut = fOut.path
     opencv_imgcodecs.imwrite(pathOut, mat)
   }
