@@ -2,7 +2,7 @@
  *  TestWindow.scala
  *  (JavaCVTest)
  *
- *  Copyright (c) 2016-2019 Hanns Holger Rutz. All rights reserved.
+ *  Copyright (c) 2016-2022 Hanns Holger Rutz. All rights reserved.
  *
  *  This software is published under the GNU General Public License v3+
  *

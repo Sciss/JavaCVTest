@@ -2,7 +2,7 @@
  *  HoughTest2.scala
  *  (JavaCVTest)
  *
- *  Copyright (c) 2016-2019 Hanns Holger Rutz. All rights reserved.
+ *  Copyright (c) 2016-2022 Hanns Holger Rutz. All rights reserved.
  *
  *  This software is published under the GNU General Public License v3+
  *
@@ -322,7 +322,7 @@ object HoughTest2 {
                 val p3 = sect3.get
                 
                 def rangeCheck(pt: Point): Boolean = {
-                  val bad = (pt.x < 0 || pt.x > width || pt.y < 0 || pt.y > height)
+                  val bad = pt.x < 0 || pt.x > width || pt.y < 0 || pt.y > height
                   if (bad) println(s"out-of-bounds: (${pt.x}, ${pt.y})")
                   bad
                 }
