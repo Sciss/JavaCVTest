@@ -20,15 +20,16 @@ import org.bytedeco.javacpp.{opencv_core, opencv_imgcodecs, opencv_imgproc}
 
 object CircleHoughTest {
   def main(args: Array[String]): Unit = {
+    val id = "0063"
     val pathIn      = if (args.length > 0) args(0) else {
 //      "/home/hhrutz/Documents/projects/Kontakt/materials/photos/snap-210419_185417.jpg"
 //      "/home/hhrutz/Documents/projects/peek2021/swap_space/scans/220423_group/IMG_0054ovr_eq_scale.jpg"
 //      "/home/hhrutz/Documents/projects/peek2021/swap_space/scans/220423_group/IMG_0054ovr_eq_scale-hpf.jpg"
-      "/home/hhrutz/Documents/projects/peek2021/swap_space/scans/220423_group/IMG_0056ovr_eq_scale.jpg"
+      s"/home/hhrutz/Documents/projects/peek2021/swap_space/scans/220423_group/IMG_${id}ovr_eq_scale.jpg"
     }
     val pathInPre =
 //      "/home/hhrutz/Documents/projects/peek2021/swap_space/scans/220423_group/IMG_0054ovr_eq_scale-gray-T.jpg"
-      "/home/hhrutz/Documents/projects/peek2021/swap_space/scans/220423_group/IMG_0056ovr_eq_scale-gray-T.jpg"
+      s"/home/hhrutz/Documents/projects/peek2021/swap_space/scans/220423_group/IMG_${id}ovr_eq_scale-gray-T.jpg"
     val mat         = opencv_imgcodecs.imread(pathIn)
     val matPre      = opencv_imgcodecs.imread(pathInPre)
     val greyMat     = new Mat()
@@ -106,7 +107,7 @@ object CircleHoughTest {
           val r         = math.round(indexer.get(0, i, 2))
           val strength  = indexer.get(0, i, 2)
 
-          println(s"cx = $cx, cy = $cy, r = $r, strength = $strength")
+          println(s"Center(cx = $cx, cy = $cy, r = $r, strength = $strength),")
 
           val pt    = new Point(cx, cy)
           val colr  = new Scalar(0, 0, 255, 128)
@@ -121,7 +122,7 @@ object CircleHoughTest {
       require (base.isDirectory)
       val dirOut  = base / "temp"
       dirOut.mkdirs()
-      val fOut    = dirOut / "circle-hough-test.jpg"
+      val fOut    = dirOut / s"circle-hough-$id-test.jpg"
       val pathOut = fOut.path
       opencv_imgcodecs.imwrite(pathOut, mat)
     }
